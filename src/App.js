@@ -11,6 +11,7 @@ import DetalleProducto from './pages/Product/DetalleProducto';
 import Register from './pages/Register/Register';
 import Footer from './pages/Footer/Footer';
 import Layout from './components/Layout/Layout';
+import Contacto from './pages/Contacto/Contacto';
 import {useState} from 'react'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/product/:productId" element={<DetalleProducto />}/>
           <Route path="/menu/comidachilena" element={<ComidaChilena />}/>
           <Route path="/footer" element={<Footer />}/>
+          <Route path="/contacto" element={<Contacto />}/>
 
         </Route>
       </Routes>

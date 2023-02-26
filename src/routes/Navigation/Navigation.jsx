@@ -19,6 +19,7 @@ const Navigation = () => {
             <Nav.Link as={NavLink} to='/' >Home</Nav.Link>
             <Nav.Link as={NavLink} to='/reservas' >Reservas</Nav.Link>
             <Nav.Link as={NavLink} to='/register' >Registrar</Nav.Link>
+            <Nav.Link as={NavLink} to='/contacto' >Contacto</Nav.Link>
             <Nav.Link as={NavLink} to='/product' >Productos</Nav.Link>
             <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item  as={NavLink} to='/Menu/ComidaChilena'>Comida Chilena</NavDropdown.Item>
@@ -28,6 +29,7 @@ const Navigation = () => {
               <NavDropdown.Item href="#action/3.4">Aperitivos</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Vinos</NavDropdown.Item>
             </NavDropdown>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

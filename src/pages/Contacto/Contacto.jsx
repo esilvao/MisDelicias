@@ -4,7 +4,7 @@ import axios from 'axios'
 import '../../index.css'
 
 
-const Register = ({setId}) => {
+const Contacto = ({setId}) => {
   const formInitDatails={
     username : "",
     emial : "",
@@ -57,11 +57,11 @@ const Register = ({setId}) => {
         <Row>
         
           <Col md={6}>
-            <img width="100%" height="400PX" src="https://images.unsplash.com/photo-1588123190131-1c3fac394f4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHJlc3RvcmFudGV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="..."></img>
+            <img width="100%" height="400PX" src="https://images.unsplash.com/photo-1665233272919-38663f1a1b7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlc3RvcmFudGV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="..."></img>
           </Col>
           <Col md={6}>
-            <h3 className='d-flex justify-content-center'>Registrar</h3>  
-            <label>Registarse como usuario frecuente en nuestro sitio le da beneficios de descuentos en reservas de delivery, como primer consumo tiene un 20% en el total de la commpra y las siguentes compras tendra un 10% de descuento <strong>Registrate Ya</strong></label>
+            <h3 className='d-flex justify-content-center'>Contactanos</h3>  
+            <label>Para dudas, consultas, sugerencias o reclamos por favor envianos un mensaje y nosotros atenderemos para dar respuesta a tu solicitud <strong>Escribenos </strong></label>
             <br /><br />
             <form onSubmit={handlerSubmit}>
               <Row>
@@ -74,7 +74,11 @@ const Register = ({setId}) => {
                 </Col>
                 <br /><br />
                 <Col md={12}>
-                    <input type="password" name="password" placeholder='Password'  value={formDatails.password} onChange={(e)=>changeValue(e)}></input>
+                    <input type="text" name="asunto" placeholder='Asunto'  value={formDatails.asunto} onChange={(e)=>changeValue(e)}></input>
+                </Col>
+                <br /><br />
+                <Col md={12}>
+                    <textarea name="comentario" placeholder='Comentario'  value={formDatails.comentario} onChange={(e)=>changeValue(e)} cols="23" rows="3"></textarea>
                 </Col>
                 <br /><br />
                 <Col md={12}>
@@ -92,4 +96,4 @@ const Register = ({setId}) => {
   )
 }
 
-export default Register
+export default Contacto
