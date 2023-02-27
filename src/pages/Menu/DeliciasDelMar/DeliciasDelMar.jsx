@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { db } from "../../Config/Firebase";
+import { db } from "../../../Config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import '../../index.css'
+import '../../../index.css'
 
 
-const Product = () => {
+const DeliciasDelMar = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Product = () => {
       try {
 
 
-        const collectionRef = collection(db, "Menu");
+        const collectionRef = collection(db, "MenuDelMar");
         const response = await getDocs(collectionRef);
 
         const docs = response.docs.map((doc) => {
@@ -37,7 +37,8 @@ const Product = () => {
   console.log("ARRAY DE productos "+productos);
   return (
     <div id="misitio">
-      <h1 className="text-center">Menu mmmmmmmmmmmm</h1>
+      <h1 className="text-center">Menu Delicias del Mar</h1>
+      <p className="text-center"> La mejor calidad de productos de nuestro mar</p>
       
       <div>
           {productos.map((producto) => (
@@ -58,4 +59,4 @@ const Product = () => {
   );
 }
 
-export default Product
+export default DeliciasDelMar

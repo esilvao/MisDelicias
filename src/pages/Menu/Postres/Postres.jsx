@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { db } from "../../Config/Firebase";
+import { db } from "../../../Config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import '../../index.css'
+import {Row,Col,Container} from 'react-bootstrap'
+import '../../../index.css'
 
 
-const Product = () => {
+const Postres = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const Product = () => {
       try {
 
 
-        const collectionRef = collection(db, "Menu");
+        const collectionRef = collection(db, "MenuPostres");
         const response = await getDocs(collectionRef);
 
         const docs = response.docs.map((doc) => {
@@ -37,11 +38,15 @@ const Product = () => {
   console.log("ARRAY DE productos "+productos);
   return (
     <div id="misitio">
-      <h1 className="text-center">Menu mmmmmmmmmmmm</h1>
-      
+      <h1 className="text-center">Delicias Dulces</h1>
+      <p className="text-center"> Acompaña tus comidas con un toque de dulzor</p>
       <div>
-          {productos.map((producto) => (
+        <Container>
+          <Row  className="aling-items-center">
+            
+            {productos.map((producto) => (
             <div key={producto.id} style={{ color: "#880022" }}>
+              <Col md={6}>
               <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={producto.img} alt={producto.nombre} />
                 <Card.Body>
@@ -50,12 +55,17 @@ const Product = () => {
                   <Button variant="primary">Price: ${producto.precio}</Button>
                 </Card.Body>
               </Card>
+              </Col>
             </div>
           ))}
+            
+          </Row>
+        </Container>
+
         </div>
     </div>
           
   );
 }
 
-export default Product
+export default Postres
