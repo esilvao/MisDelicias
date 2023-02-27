@@ -194,7 +194,7 @@ const handlerSubmit = async(e) => {
                   <label>Comentarios : </label>
                   </Col>
                   <Col>
-                  <textarea name="comentarios" cols="23" rows="5"  name="comentarios" value={formDatails.comentarios} onChange={(e)=>changeValue(e)} />
+                  <textarea name="comentarios" cols="23" rows="5" name="comentarios" value={formDatails.comentarios} onChange={(e)=>changeValue(e)} />
 
                   </Col>
                 </Row>
