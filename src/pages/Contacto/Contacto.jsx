@@ -86,7 +86,15 @@ const Contacto = ({setId}) => {
                 </Col>
               </Row>
              </form>
-            <br />
+             <h5 className='d-flex justify-content-center'>Horarios de atención</h5>  
+            <label><strong>Lunes a Sabado </strong>11:00 a 02:00 (todos los locales)</label>
+            <label><strong>Domingo</strong>11:00 a 20:00  (todos los locales)</label>
+            <br /><br />
+            <h5 className='d-flex justify-content-center'>Ubicados en</h5>  
+            <label>Ahumada #3240 - Santiago Centro</label>
+            <label>Informacion de contacto Mail: info@lasdeliciac.cl - </label>
+            <label>Telefono: (+562) 6543 7654</label>
+            <br /><br />
             <br />
             <br />
           </Col>

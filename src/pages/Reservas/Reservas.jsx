@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import {Row,Col,Container} from 'react-bootstrap'
 import { db } from "../../Config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
-import { doc, addDoc } from "firebase/firestore";
+import { addDoc } from "firebase/firestore";
 
 const Reservas = () => {
 
@@ -194,7 +194,7 @@ const handlerSubmit = async(e) => {
                   <label>Comentarios : </label>
                   </Col>
                   <Col>
-                  <textarea name="comentarios" cols="23" rows="5" name="comentarios" value={formDatails.comentarios} onChange={(e)=>changeValue(e)} />
+                  <textarea name="comentarios" cols="23" rows="5" value={formDatails.comentarios} onChange={(e)=>changeValue(e)} />
 
                   </Col>
                 </Row>

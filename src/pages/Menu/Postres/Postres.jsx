@@ -40,29 +40,23 @@ const Postres = () => {
     <div id="misitio">
       <h1 className="text-center">Delicias Dulces</h1>
       <p className="text-center"> Acompaña tus comidas con un toque de dulzor</p>
-      <div>
-        <Container>
-          <Row  className="aling-items-center">
-            
+      <Container>
+      <Row className="d-flex flex-row mb-3" >
             {productos.map((producto) => (
-            <div key={producto.id} style={{ color: "#880022" }}>
-              <Col md={6}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={producto.img} alt={producto.nombre} />
+            <Col sm={12} md={4} lg={3}  className="p-3" key={producto.id} style={{ color: "#880022" }}>
+              <Card className="p-1" style={{ width: "15rem",height: "30rem"}}>
+                <Card.Img width="300px%" height="200px" variant="top" src={producto.img} alt={producto.nombre} />
                 <Card.Body>
-                  <Card.Title>{producto.nombre}</Card.Title>
-                  <Card.Text>{producto.ingredientes}</Card.Text>
+                  <p><strong>{producto.nombre}</strong></p>
+                  <p><small>{producto.ingredientes}</small></p>
                   <Button variant="primary">Price: ${producto.precio}</Button>
                 </Card.Body>
               </Card>
               </Col>
-            </div>
+           
           ))}
-            
-          </Row>
+        </Row>
         </Container>
-
-        </div>
     </div>
           
   );

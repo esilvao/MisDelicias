@@ -17,16 +17,16 @@ import Postres from './pages/Menu/Postres/Postres';
 import {useState} from 'react'
 
 function App() {
-  const [id,setId] = useState(null)
+  const [user,setUser] = useState("No Registrado")
   return (
 
     <div >
       <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path='/' element={<Layout usuario={user} />}>
           <Route path="/" element={<Home />}/>
           <Route path="/reservas" element={<Reservas />}/>
           <Route path="/login" element={<Login />}/>
-          <Route path="/register" element={<Register setUser={setId} />}/>
+          <Route path="/register" element={<Register usuario={user} login={setUser}/>}/>
           <Route path="/menu" element={<Menu />}/>
           <Route path="/product" element={<Product />}/>
           <Route path="/product/:productId" element={<DetalleProducto />}/>

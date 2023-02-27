@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="container" >
           <div className="row align-items-center">
                 <div class="col">
-                  <h6 class="card-title">Contacto</h6>
+                  <h6 class="card-title">Ubicación</h6>
                   <ul>
                   <li ><small>Ahumada #3240 - Santiago Centro</small></li>
                   <li ><small>Mail: info@lasdeliciac.cl</small></li>

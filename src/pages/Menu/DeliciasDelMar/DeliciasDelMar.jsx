@@ -3,6 +3,7 @@ import { db } from "../../../Config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import {Row,Col,Container} from 'react-bootstrap'
 import '../../../index.css'
 
 
@@ -39,21 +40,23 @@ const DeliciasDelMar = () => {
     <div id="misitio">
       <h1 className="text-center">Menu Delicias del Mar</h1>
       <p className="text-center"> La mejor calidad de productos de nuestro mar</p>
-      
-      <div>
+      <Container>
+      <Row className="d-flex flex-row mb-3" >
           {productos.map((producto) => (
-            <div key={producto.id} style={{ color: "#880022" }}>
-              <Card style={{ width: "18rem" }}>
+           <Col sm={12} md={4} lg={3}  className="p-3" key={producto.id} style={{ color: "#880022" }}>
+              <Card className="p-1" style={{ width: "15rem",height: "30rem"}}>
                 <Card.Img variant="top" src={producto.img} alt={producto.nombre} />
                 <Card.Body>
                   <Card.Title>{producto.nombre}</Card.Title>
                   <Card.Text>{producto.ingredientes}</Card.Text>
-                  <Button variant="primary">Price: ${producto.precio}</Button>
+                  <Button className="d-flex align-items-baseline" variant="primary">Price: ${producto.precio}</Button>
                 </Card.Body>
               </Card>
-            </div>
+   
+            </Col>
           ))}
-        </div>
+        </Row>
+       </Container>
     </div>
           
   );

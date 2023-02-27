@@ -6,12 +6,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import  '../../pages/Reservas/Reservas.css';
 import './Navegacion.css';
-const Navigation = () => {
+
+const Navigation = ({usuario}) => {
   return (
     <div id="todo">
-
+ 
       <Navbar expand="lg" >
-      <Container>        
+      <Container>  
+            
+       
         <Navbar.Brand href="#home">LAS DELICIAS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -20,7 +23,6 @@ const Navigation = () => {
             <Nav.Link as={NavLink} to='/reservas' >Reservas</Nav.Link>
             <Nav.Link as={NavLink} to='/register' >Registrar</Nav.Link>
             <Nav.Link as={NavLink} to='/contacto' >Contacto</Nav.Link>
-            <Nav.Link as={NavLink} to='/product' >Productos</Nav.Link>
             <NavDropdown title="Menu" id="basic-nav-dropdown">
               <NavDropdown.Item  as={NavLink} to='/Menu/ComidaChilena'>Comida Chilena</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/Menu/DeliciasDelMar'>Delicias del Mar</NavDropdown.Item>
@@ -29,12 +31,13 @@ const Navigation = () => {
               <NavDropdown.Item href="#action/3.4">Aperitivos</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">Vinos</NavDropdown.Item>
             </NavDropdown>
-            
+           
           </Nav>
         </Navbar.Collapse>
+        Bienvenido : {usuario}
       </Container>
     </Navbar>
-
+    
     </div>
   )
 }
