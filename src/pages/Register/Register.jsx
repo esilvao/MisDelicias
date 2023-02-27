@@ -1,9 +1,8 @@
 import {Row,Col,Container} from 'react-bootstrap'
 import {useState} from 'react'
-import axios from 'axios'
 import '../../index.css'
 import { db } from "../../Config/Firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection } from "firebase/firestore";
 import { addDoc } from "firebase/firestore";
 
 

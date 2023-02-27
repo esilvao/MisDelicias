@@ -12,7 +12,7 @@ const Contacto = ({setId}) => {
   }
 
   const [formDatails,setformDatails] = useState('')
-  const [status,setStatus] = useState({})
+  
 
   const changeValue =(e)=>{
     e.preventDefault();
@@ -36,12 +36,7 @@ const Contacto = ({setId}) => {
       let id = data._id
       setId(id)
       localStorage.setItem('userId',id)
-      if (response.status===200){
-        setStatus({succes: true, message : 'usuario creado con exito'})
-      }else{
-        setStatus({succes: false, message : 'usuario ya se encuentra creado'})
-      }
-
+      
     }
     catch(error){
       console.log(error)
@@ -83,6 +78,7 @@ const Contacto = ({setId}) => {
                 <br /><br />
                 <Col md={12}>
                     <button type="submit">Enviar</button>
+                   
                 </Col>
               </Row>
              </form>
