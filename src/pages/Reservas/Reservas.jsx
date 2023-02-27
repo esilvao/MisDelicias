@@ -22,7 +22,7 @@ const Reservas = () => {
   }
 
   const [formDatails,setformDatails] = useState('')
-  const [status,setStatus] = useState({})
+
 
 
   useEffect(() => {
