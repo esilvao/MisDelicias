@@ -4,7 +4,6 @@ import Reservas from './pages/Reservas/Reservas';
 import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
-import Navigation from './routes/Navigation/Navigation';
 import ComidaChilena from './pages/Menu/ComidaChilena/ComidaChilena';
 import Product from './pages/Product/Product';
 import DetalleProducto from './pages/Product/DetalleProducto';
