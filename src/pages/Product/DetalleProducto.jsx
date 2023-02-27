@@ -12,7 +12,7 @@ const DetalleProducto = () => {
     const getProduct = async() => {
       const response = await axios ('https://fakestoreapi.com/products')
       const resultado = await response.data;
-      let miproducto = resultado.find(product => product.id == productId)
+      let miproducto = resultado.find(product => product.id === productId)
       setProduct(miproducto);
     }
     getProduct()
