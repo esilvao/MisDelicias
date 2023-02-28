@@ -16,4 +16,4 @@ Descripcion:
  En las otras colecction como los MENU lee informacion desde la base de datos y la muestra en pantalla
  Los usuario se registran en el formulario y se conecta a la collection de Clientes y se guarda la informacion el usuario (nombre , emil y password) y el usuario que se registra se muestra en la parte superior de la pantalla para que se muestre miestras se navega por toda la aplicacion.
 
- el sitio muestra informacion de Reserva, registro de usuarios, diferentas Menu,etc
+ 
